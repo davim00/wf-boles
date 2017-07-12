@@ -1,0 +1,45 @@
+//
+// Front Page Jumbotron
+// --------------------------------------------------
+
+
+.frontpage-jumbotron {
+  padding-top:    ($jumbotron-padding + $navbar-height);
+  padding-bottom: $jumbotron-padding;
+  margin-bottom: $jumbotron-padding;
+  color: $jumbotron-color;
+  background-color: $jumbotron-bg;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+
+  h2,
+  .h2 {
+    color: #fff;
+    margin-top: 0;
+  }
+
+  p {
+    margin-bottom: ($jumbotron-padding / 2);
+    font-size: $jumbotron-font-size;
+    font-weight: 200;
+    color: #fff;
+  }
+
+  @media screen and (min-width: $screen-sm-min) {
+    padding-top:    (($jumbotron-padding * 6) + $navbar-height);
+    padding-bottom: ($jumbotron-padding * 6);
+
+    .container &,
+    .container-fluid & {
+      padding-left:  ($jumbotron-padding * 2);
+      padding-right: ($jumbotron-padding * 2);
+    }
+
+    h2,
+    .h2 {
+      font-size: $jumbotron-heading-font-size;
+    }
+  }
+}
