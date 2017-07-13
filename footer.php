@@ -18,7 +18,7 @@
 
 			<?php // The footer features 3 widget areas. If no widgets are active, the entire row does not display
 			if ( is_active_sidebar( 'footer-1' ) || is_active_sidebar( 'footer-2' ) || is_active_sidebar( 'footer-3' ) ) : ?>
-				<div class="row">
+				<div class="row bottom-space">
 				  <div class="col-sm-4">
 				    <?php dynamic_sidebar( 'footer-1' ); ?>
 				  </div>
