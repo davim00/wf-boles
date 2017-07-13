@@ -6,4 +6,53 @@
 footer {
   background-color: $brand-success;
   color: #fff;
+
+  .panel {
+    margin-bottom: 0;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+
+    & > .list-group .list-group-item {
+      border: none;
+    }
+  }
+
+  .panel-default > .panel-heading {
+    color: #fff;
+    background-color: transparent;
+    border: none;
+  }
+
+  .panel-heading {
+    padding: 0 0 15px 0;
+
+    h3 {
+      color: #fff;
+    }
+  }
+
+  .list-group-item {
+    background-color: transparent;
+    padding: floor($padding-base-vertical * 0.25) 0;
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+
+  .site-copyright, .site-info {
+    text-align: center;
+  }
+
+  @media (min-width: $grid-float-breakpoint) {
+    .site-copyright {
+      text-align: left;
+    }
+
+    .site-info {
+      text-align: right;
+    }
+  }
 }

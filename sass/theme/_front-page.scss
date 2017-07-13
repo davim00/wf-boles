@@ -37,7 +37,40 @@
   }
 
   #answers {
-    background-color: $gray-lighter;
+    background: no-repeat center center $brand-info;
+    background-size: cover;
+    color: #fff;
+
+    h2 {
+      color: #fff;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      > li {
+        margin-bottom: ($padding-base-vertical * 2);
+        padding: $padding-base-vertical;
+        background: #fff;
+        color: $text-color;
+        box-shadow: 0 8px 36px rgba(0, 0, 0, 0.5);
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+
+        img {
+          width: 200px;
+          height: auto;
+          margin-left: -($padding-base-vertical);
+          margin-top: -($padding-base-vertical);
+          margin-bottom: -($padding-base-vertical);
+          margin-right: ($grid-gutter-width / 2);
+        }
+      }
+    }
   }
 
   #contact {

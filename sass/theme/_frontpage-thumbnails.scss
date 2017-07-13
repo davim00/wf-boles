@@ -11,24 +11,29 @@
     padding: 0;
     margin-bottom: 0;
     line-height: $line-height-base;
-    background-color: transparent;
+    background-color: #fff;
     border: none;
-    border-radius: 0;
-    @include transition(border .2s ease-in-out);
+    border-radius: $border-radius-base;
+    box-shadow: 0 8px 36px rgba(0,0,0,0.5);
 
     > img,
     a > img {
-      @include img-responsive;
-      margin-left: auto;
-      margin-right: auto;
+      width: 100%;
+      border-radius: $border-radius-base $border-radius-base 0 0;
     }
 
     // [converter] extracted a&:hover, a&:focus, a&.active to a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active
 
     // Image captions
     .caption {
-      padding: $thumbnail-caption-padding;
+      padding: $thumbnail-caption-padding 0;
       color: $thumbnail-caption-color;
+      font-weight: 400;
+      font-size: ($font-size-base * 1.1);
+
+      p {
+        margin: 0;
+      }
     }
   }
 
