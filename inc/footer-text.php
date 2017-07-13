@@ -9,19 +9,21 @@
    <div class="row">
 
      <?php if ( true == get_theme_mod( 'footer_copyright_year', true ) ) : ?>
-       <div class="site-copyright col-sm-6">
+       <div class="site-info col-sm-6 col-sm-push-6">
+     <?php else : ?>
+       <div class="site-info col-sm-12">
+     <?php endif;
+
+       echo get_theme_mod( 'footer_text', 'Theme: wfboles by <a href="http://mattdavisdesign.com/" target="_blank">Matt Davis</a>' ); ?>
+
+     </div>
+
+     <?php if ( true == get_theme_mod( 'footer_copyright_year', true ) ) : ?>
+       <div class="site-copyright col-sm-6 col-sm-pull-6">
          &copy; <?php echo date("Y") . ' ' . get_theme_mod( 'footer_copyright_text', 'William Boles. All rights reserved.' ); ?>
        </div>
 
-       <div class="site-info col-sm-6">
-
-       <?php else : ?>
-
-       <div class="site-info col-sm-12">
-
-       <?php endif;
-
-       echo get_theme_mod( 'footer_text', 'Theme: wfboles by <a href="http://mattdavisdesign.com/" target="_blank">Matt Davis</a>' ); ?>
+     <?php endif; ?>
 
      </div><!-- .site-info -->
    </div><!-- .row -->
