@@ -13,7 +13,7 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
+	<footer id="colophon" class="site-footer top-space bottom-space" role="contentinfo">
 		<div class="container">
 
 			<?php // The footer features 3 widget areas. If no widgets are active, the entire row does not display

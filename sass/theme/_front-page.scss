@@ -1,0 +1,51 @@
+//
+// Front Page
+// --------------------------------------------------
+
+
+#masthead {
+  position: relative;
+
+  .navbar {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+
+    @media (min-width: $grid-float-breakpoint) {
+      border-radius: 0;
+    }
+  }
+}
+
+.home {
+
+  section h2 {
+    margin-top: 0;
+  }
+
+  @media (min-width: $grid-float-breakpoint) {
+    #intro {
+
+      h2 {
+        font-size: ceil($font-size-h2 * 1.1);
+      }
+    }
+
+    .intro-text {
+      font-size: ceil($font-size-base * 1.1);
+    }
+  }
+
+  #answers {
+    background-color: $gray-lighter;
+  }
+
+  #contact {
+    background-color: lighten(desaturate($brand-primary, 60%), 10%);
+    color: #fff;
+
+    h2 {
+      color: #fff;
+    }
+  }
+}

@@ -6,7 +6,7 @@
 .frontpage-jumbotron {
   padding-top:    ($jumbotron-padding + $navbar-height);
   padding-bottom: $jumbotron-padding;
-  margin-bottom: $jumbotron-padding;
+  margin-bottom: 0;
   color: $jumbotron-color;
   background-color: $jumbotron-bg;
   background-repeat: no-repeat;
@@ -14,22 +14,23 @@
   background-size: cover;
   text-align: center;
 
-  h2,
-  .h2 {
+  h1,
+  .h1 {
     color: #fff;
     margin-top: 0;
+    font-weight: 900;
   }
 
   p {
-    margin-bottom: ($jumbotron-padding / 2);
-    font-size: $jumbotron-font-size;
-    font-weight: 200;
+    margin-bottom: $jumbotron-padding;
+    font-size: ($jumbotron-font-size * 0.7);
+    font-weight: 400;
     color: #fff;
   }
 
   @media screen and (min-width: $screen-sm-min) {
-    padding-top:    (($jumbotron-padding * 6) + $navbar-height);
-    padding-bottom: ($jumbotron-padding * 6);
+    padding-top:    (($jumbotron-padding * 3) + $navbar-height);
+    padding-bottom: ($jumbotron-padding * 3);
 
     .container &,
     .container-fluid & {
@@ -37,9 +38,18 @@
       padding-right: ($jumbotron-padding * 2);
     }
 
-    h2,
-    .h2 {
+    h1,
+    .h1 {
       font-size: $jumbotron-heading-font-size;
+      margin-bottom: ($font-size-base * 2);
+    }
+
+    p {
+      font-size: $jumbotron-font-size;
+    }
+
+    .btn-lg {
+      font-size: ($jumbotron-font-size * 1.2);
     }
   }
 }

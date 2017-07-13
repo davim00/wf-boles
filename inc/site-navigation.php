@@ -6,7 +6,7 @@
  */
 
  function wfboles_site_navigation() { ?>
-   <nav id="site-navigation" class="navbar navbar-fixed-top navbar-default main-navigation" role="navigation">
+   <nav id="site-navigation" class="navbar navbar-default main-navigation" role="navigation">
      <div class="container">
        <div class="navbar-header">
          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
@@ -15,7 +15,7 @@
            <span class="icon-bar"></span>
            <span class="icon-bar"></span>
          </button>
-         <h1 class="site-title"><?php wfboles_the_custom_logo(); ?><a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+         <div class="site-title"><?php wfboles_the_custom_logo(); ?><a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
        </div>
 
        <!-- Collect the nav links, forms, and other content for toggling -->

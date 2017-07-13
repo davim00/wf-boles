@@ -55,7 +55,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 # Elements
 --------------------------------------------------------------*/
 @import "bootstrap/scaffolding";
-@import "bootstrap/type";
+@import "theme/type";
 @import "bootstrap/code";
 @import "bootstrap/grid";
 @import "bootstrap/tables";
@@ -106,6 +106,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 # Theme
 --------------------------------------------------------------*/
 @import "theme/elements";
+@import "theme/utility";
 @import "theme/widgets";
+@import "theme/sections";
+@import "theme/footer";
+@import "theme/front-page";
 @import "theme/frontpage-jumbotron";
 @import "theme/frontpage-thumbnails";

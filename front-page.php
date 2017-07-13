@@ -14,24 +14,26 @@
 
 get_header(); ?>
 
-<section>
+<section id="intro" class="top-space">
 	<div class="container">
 	  <div class="row">
 	    <div class="col-sm-6">
-	      <h2>Hello, I&rsquo;m William Boles</h2>
-				<p>I&rsquo;ve worked in the pavement industry for over 35 years as a civil engineer, contractor and consultant for the federal government and several private companies. Now, I want to help you overcome your pavement problems and answer the concerns you might have with your concrete and asphalt work.</p>
+				<div class="text-top-100">
+					<h2>Hello, I&rsquo;m <span class="primary-color">William Boles</span></h2>
+					<p class="intro-text">I&rsquo;ve worked in the pavement industry for over 35 years as a civil engineer, contractor and consultant for the federal government and several private companies. Now, I want to help you overcome your pavement problems and answer the concerns you might have with your concrete and asphalt work.</p>
+				</div>
 	    </div>
 			<div class="col-sm-6">
-			  <img src="<?php echo get_template_directory_uri() . '/images/headshot.jpg' ?>" alt="Head Shot" />
+			  <img class="img-responsive" src="<?php echo get_template_directory_uri() . '/images/headshot.jpg' ?>" alt="Head Shot" />
 			</div>
 	  </div>
 	</div>
 </section>
-<section>
+<section id="answers" class="top-space bottom-space">
 	<div class="container">
 	  <div class="row">
-	    <div class="col-sm-12">
-	      <h2>Get the right answers for any type of pavement issue.</h2>
+	    <div class="col-sm-12 section-head">
+	      <h2>Get the <span class="primary-color">right answers</span> for any type of pavement issue.</h2>
 				<p>Just send me your questions and photos to learn more about the following common issues:</p>
 	    </div>
 	  </div>

@@ -10,7 +10,7 @@
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
-function _s_customize_register( $wp_customize ) {
+function wfboles_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
@@ -85,8 +85,8 @@ wfboles_Kirki::add_field( 'wfboles_theme', array(
 	'default'     => array(
 		'font-family'    => '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif',
 		'variant'        => '400',
-		'font-size'      => '14px',
-		'line-height'    => '1.428571429',
+		'font-size'      => '16px',
+		'line-height'    => '1.5',
 		// 'letter-spacing' => '0',
 		// 'color'          => '#333333',
 	),
@@ -111,9 +111,10 @@ wfboles_Kirki::add_field( 'wfboles_theme', array(
 	'default'     => array(
 		'font-family'    => '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif',
 		'variant'        => '400',
+		'text-transform' => 'normal',
 		// 'font-size'      => '16px',
 		// 'line-height'    => '1.5',
-		// 'letter-spacing' => '0',
+		'letter-spacing' => '0',
 		// 'color'          => '#333333',
 	),
 	'output' => array(
@@ -137,14 +138,42 @@ wfboles_Kirki::add_field( 'wfboles_theme', array(
 	'default'     => array(
 		'font-family'    => '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif',
 		'variant'        => '400',
+		'text-transform' => 'normal',
 		// 'font-size'      => '16px',
 		// 'line-height'    => '1.5',
-		// 'letter-spacing' => '0',
+		'letter-spacing' => '0',
 		// 'color'          => '#333333',
 	),
 	'output' => array(
 		array(
 			'element' => '.site-title',
+		),
+	),
+) );
+
+/**
+ * Add the jumbotron-typography control
+ */
+wfboles_Kirki::add_field( 'wfboles_theme', array(
+	'type'        => 'typography',
+	'settings'    => 'jumbotron_typography',
+	'label'       => esc_attr__( 'Hero Image Header', 'wfboles' ),
+	'description' => esc_attr__( 'Select the typography options for your hero image header.', 'wfboles' ),
+	'help'        => esc_attr__( 'The typography options you set here will override the typography options for the hero image header text on your site.', 'wfboles' ),
+	'section'     => 'typography',
+	'priority'    => 40,
+	'default'     => array(
+		'font-family'    => '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif',
+		'variant'        => '400',
+		'text-transform' => 'normal',
+		// 'font-size'      => '16px',
+		// 'line-height'    => '1.5',
+		'letter-spacing' => '0',
+		// 'color'          => '#333333',
+	),
+	'output' => array(
+		array(
+			'element' => '.frontpage-jumbotron h1',
 		),
 	),
 ) );

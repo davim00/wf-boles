@@ -26,11 +26,17 @@
 	<header id="masthead" class="site-header" role="banner">
 		<?php // The primary site navigation
 		wfboles_site_navigation(); ?>
+
+
+		<?php // A jumbotron (hero image) can be displayed on a static front page, set with the customizer
+		if ( is_front_page() && ! is_home() ) :
+			wfboles_frontpage_jumbotron();
+		endif; ?>
+
 	</header><!-- #masthead -->
 
-	<?php // A jumbotron (hero image) can be displayed on a static front page, set with the customizer
-	if ( is_front_page() && ! is_home() ) :
-		wfboles_frontpage_jumbotron();
-	endif; ?>
-
-	<div id="content" class="site-content container">
+	<?php if ( is_front_page() && ! is_home() ) : ?>
+		<div id="content" class="site-content">
+	<?php else : ?>
+		<div id="content" class="site-content container">
+	<?php endif; ?>
