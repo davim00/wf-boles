@@ -29,36 +29,36 @@ get_header(); ?>
 	  </div>
 	</div>
 </section>
-<section id="answers" class="top-space bottom-space">
+<section id="answers" class="top-space bottom-space" style="background-image: url(<?php echo get_template_directory_uri() . '/images/cracked-drive.jpg' ?>)">
 	<div class="container">
 	  <div class="row">
-	    <div class="col-sm-12 section-head">
-	      <h2>Get the <span class="primary-color">right answers</span> for any type of pavement issue.</h2>
+			<div class="col-sm-12 section-head">
+				<h2>Get the <span class="primary-color">right answers</span> for any type of pavement issue.</h2>
 				<p>Just send me your questions and photos to learn more about the following common issues:</p>
-	    </div>
-	  </div>
+			</div>
+		</div>
 		<div class="row">
 		  <div class="col-sm-4">
 		    <div class="thumbnail frontpage-thumbnail">
-		      <img class="img-circle" src="<?php echo get_template_directory_uri() . '/images/thumb-01.png' ?>" alt="Cracks" />
+		      <img src="<?php echo get_template_directory_uri() . '/images/thumb-01.jpg' ?>" alt="Cracks" />
 					<div class="caption">
-						<p class="lead">Cracks, scaling<br />& surface wear</p>
+						<p>Cracks, scaling and surface wear</p>
 					</div>
 			  </div>
 			</div>
 			<div class="col-sm-4">
 				<div class="thumbnail frontpage-thumbnail">
-					<img class="img-circle" src="<?php echo get_template_directory_uri() . '/images/thumb-02.png' ?>" alt="Weather" />
+					<img src="<?php echo get_template_directory_uri() . '/images/thumb-02.jpg' ?>" alt="Weather" />
 					<div class="caption">
-						<p class="lead">Weather<br />& drainage issues</p>
+						<p>Weather and drainage issues</p>
 					</div>
 				</div>
 			</div>
 			<div class="col-sm-4">
 				<div class="thumbnail frontpage-thumbnail">
-					<img class="img-circle" src="<?php echo get_template_directory_uri() . '/images/thumb-03.png' ?>" alt="Design" />
+					<img src="<?php echo get_template_directory_uri() . '/images/thumb-03.jpg' ?>" alt="Design" />
 					<div class="caption">
-						<p class="lead">Parking lot, driveway<br />or road design</p>
+						<p>Parking lot, driveway or road design</p>
 					</div>
 			</div>
 		</div>
