@@ -32,3 +32,4 @@ Thumbs.db
 .sass-cache/
 node_modules/
 /._*
+*.psd
