@@ -5,7 +5,7 @@
 
 footer {
   background-color: $brand-success;
-  color: #fff;
+  color: darken($gray-lighter, 15%);
 
   .panel {
     margin-bottom: 0;
