@@ -167,10 +167,13 @@
 
 .navbar-brand {
   float: left;
-  padding: $navbar-padding-vertical $navbar-padding-horizontal;
+  padding-left: $navbar-padding-horizontal;
+  padding-right: $navbar-padding-horizontal;
+  margin-top: $navbar-padding-vertical;
+  margin-bottom: $navbar-padding-vertical;
   font-size: $font-size-large;
   line-height: $line-height-computed;
-  height: $navbar-height;
+  height: $line-height-computed;
 
   &:hover,
   &:focus {
@@ -241,6 +244,7 @@
     padding-top:    10px;
     padding-bottom: 10px;
     line-height: $line-height-computed;
+    transition: color 100ms ease-in-out, background-color 100ms ease-in-out;
   }
 
   @media (max-width: $grid-float-breakpoint-max) {
@@ -275,8 +279,8 @@
     > li {
       float: left;
       > a {
-        padding-top:    $navbar-padding-vertical;
-        padding-bottom: $navbar-padding-vertical;
+        margin-top:    ($navbar-padding-vertical - 10);
+        margin-bottom: ($navbar-padding-vertical - 10);
       }
     }
   }
@@ -529,7 +533,94 @@
       }
     }
   }
+
+  // Style the last link like a button
+  .navbar-nav > li:last-of-type a {
+    display: inline-block;
+    margin-bottom: 0; // For input.btn
+    font-weight: $btn-font-weight;
+    text-transform: uppercase;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+    border: 1px solid transparent;
+    white-space: nowrap;
+    color: $navbar-default-color;
+    background-color: transparent;
+    border-color: $navbar-default-color;
+    transition: color .2s ease, background-color .2s ease, border-color .2s ease;
+    @include button-size(floor($padding-base-vertical / 2), floor($padding-base-horizontal / 2), $font-size-base, $line-height-base, $btn-border-radius-base);
+    @include user-select(none);
+    @include navbar-vertical-align(38);
+
+    &,
+    &:active,
+    &.active {
+      &:focus,
+      &.focus {
+        @include tab-focus;
+      }
+    }
+
+    &:hover,
+    &:focus,
+    &.focus {
+      color: #fff;
+      text-decoration: none;
+      background-color: $brand-primary;
+          border-color: $brand-primary;
+    }
+
+    &:active,
+    &.active {
+      outline: 0;
+      background-image: none;
+      @include box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
+
+      .open > &.dropdown-toggle {
+        background-image: none;
+        color: #fff;
+        background-color: $brand-primary;
+            border-color: $brand-primary;
+      }
+    }
+
+    &:focus,
+    &.focus {
+      color: #fff;
+      background-color: $brand-primary;
+          border-color: $brand-primary;
+    }
+
+    &:hover {
+      color: #fff;
+      background-color: $brand-primary;
+          border-color: $brand-primary;
+    }
+
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+      cursor: $cursor-disabled;
+      @include opacity(.65);
+      @include box-shadow(none);
+      &:hover,
+      &:focus,
+      &.focus {
+        background-color: transparent;
+            border-color: $gray-light;
+      }
+    }
+
+    .badge {
+      color: #fff;
+      background-color: $brand-primary;
+    }
+  }
 }
+
 
 // Inverse navbar
 
