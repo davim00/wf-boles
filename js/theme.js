@@ -27,4 +27,236 @@
       input_parent.hide('slow');
       e.preventDefault();
     });
+
+    /*
+      By Osvaldas Valutis, www.osvaldas.info
+      Available for use under the MIT License
+    */
+
+    'use strict';
+
+    ;( function( window, document, undefined )
+    {
+      $( '#contact-file01' ).each( function()
+      {
+        var $input	 = $( this ),
+          $label	 = $( 'span.wpcf7-form-control-wrap' ).next( 'label[for="contact-file01"]' ),
+          labelVal = $label.html();
+
+        $input.on( 'change', function( e )
+        {
+          var fileName = '';
+
+          if( e.target.value )
+            fileName = e.target.value.split( '\\' ).pop();
+
+          if( fileName )
+            $label.find( 'span' ).html( fileName );
+          else
+            $label.html( labelVal );
+        });
+
+        // Firefox bug fix
+        $input
+        .on( 'focus', function(){ $input.addClass( 'has-focus' ); })
+        .on( 'blur', function(){ $input.removeClass( 'has-focus' ); });
+      });
+    })( jQuery, window, document );
+
+    ;( function( window, document, undefined )
+    {
+      $( '#contact-file02' ).each( function()
+      {
+        var $input	 = $( this ),
+          $label	 = $( 'span.wpcf7-form-control-wrap' ).next( 'label[for="contact-file02"]' ),
+          labelVal = $label.html();
+
+        $input.on( 'change', function( e )
+        {
+          var fileName = '';
+
+          if( e.target.value )
+            fileName = e.target.value.split( '\\' ).pop();
+
+          if( fileName )
+            $label.find( 'span' ).html( fileName );
+          else
+            $label.html( labelVal );
+        });
+
+        // Firefox bug fix
+        $input
+        .on( 'focus', function(){ $input.addClass( 'has-focus' ); })
+        .on( 'blur', function(){ $input.removeClass( 'has-focus' ); });
+      });
+    })( jQuery, window, document );
+
+    ;( function( window, document, undefined )
+    {
+      $( '#contact-file03' ).each( function()
+      {
+        var $input	 = $( this ),
+          $label	 = $( 'span.wpcf7-form-control-wrap' ).next( 'label[for="contact-file03"]' ),
+          labelVal = $label.html();
+
+        $input.on( 'change', function( e )
+        {
+          var fileName = '';
+
+          if( e.target.value )
+            fileName = e.target.value.split( '\\' ).pop();
+
+          if( fileName )
+            $label.find( 'span' ).html( fileName );
+          else
+            $label.html( labelVal );
+        });
+
+        // Firefox bug fix
+        $input
+        .on( 'focus', function(){ $input.addClass( 'has-focus' ); })
+        .on( 'blur', function(){ $input.removeClass( 'has-focus' ); });
+      });
+    })( jQuery, window, document );
+
+    ;( function( window, document, undefined )
+    {
+      $( '#contact-file04' ).each( function()
+      {
+        var $input	 = $( this ),
+          $label	 = $( 'span.wpcf7-form-control-wrap' ).next( 'label[for="contact-file04"]' ),
+          labelVal = $label.html();
+
+        $input.on( 'change', function( e )
+        {
+          var fileName = '';
+
+          if( e.target.value )
+            fileName = e.target.value.split( '\\' ).pop();
+
+          if( fileName )
+            $label.find( 'span' ).html( fileName );
+          else
+            $label.html( labelVal );
+        });
+
+        // Firefox bug fix
+        $input
+        .on( 'focus', function(){ $input.addClass( 'has-focus' ); })
+        .on( 'blur', function(){ $input.removeClass( 'has-focus' ); });
+      });
+    })( jQuery, window, document );
+
+    ;( function( window, document, undefined )
+    {
+      $( '#contact-file05' ).each( function()
+      {
+        var $input	 = $( this ),
+          $label	 = $( 'span.wpcf7-form-control-wrap' ).next( 'label[for="contact-file05"]' ),
+          labelVal = $label.html();
+
+        $input.on( 'change', function( e )
+        {
+          var fileName = '';
+
+          if( e.target.value )
+            fileName = e.target.value.split( '\\' ).pop();
+
+          if( fileName )
+            $label.find( 'span' ).html( fileName );
+          else
+            $label.html( labelVal );
+        });
+
+        // Firefox bug fix
+        $input
+        .on( 'focus', function(){ $input.addClass( 'has-focus' ); })
+        .on( 'blur', function(){ $input.removeClass( 'has-focus' ); });
+      });
+    })( jQuery, window, document );
+
+    ;( function( window, document, undefined )
+    {
+      $( '#contact-file06' ).each( function()
+      {
+        var $input	 = $( this ),
+          $label	 = $( 'span.wpcf7-form-control-wrap' ).next( 'label[for="contact-file06"]' ),
+          labelVal = $label.html();
+
+        $input.on( 'change', function( e )
+        {
+          var fileName = '';
+
+          if( e.target.value )
+            fileName = e.target.value.split( '\\' ).pop();
+
+          if( fileName )
+            $label.find( 'span' ).html( fileName );
+          else
+            $label.html( labelVal );
+        });
+
+        // Firefox bug fix
+        $input
+        .on( 'focus', function(){ $input.addClass( 'has-focus' ); })
+        .on( 'blur', function(){ $input.removeClass( 'has-focus' ); });
+      });
+    })( jQuery, window, document );
+
+    ;( function( window, document, undefined )
+    {
+      $( '#contact-file07' ).each( function()
+      {
+        var $input	 = $( this ),
+          $label	 = $( 'span.wpcf7-form-control-wrap' ).next( 'label[for="contact-file07"]' ),
+          labelVal = $label.html();
+
+        $input.on( 'change', function( e )
+        {
+          var fileName = '';
+
+          if( e.target.value )
+            fileName = e.target.value.split( '\\' ).pop();
+
+          if( fileName )
+            $label.find( 'span' ).html( fileName );
+          else
+            $label.html( labelVal );
+        });
+
+        // Firefox bug fix
+        $input
+        .on( 'focus', function(){ $input.addClass( 'has-focus' ); })
+        .on( 'blur', function(){ $input.removeClass( 'has-focus' ); });
+      });
+    })( jQuery, window, document );
+
+    ;( function( window, document, undefined )
+    {
+      $( '#contact-file08' ).each( function()
+      {
+        var $input	 = $( this ),
+          $label	 = $( 'span.wpcf7-form-control-wrap' ).next( 'label[for="contact-file08"]' ),
+          labelVal = $label.html();
+
+        $input.on( 'change', function( e )
+        {
+          var fileName = '';
+
+          if( e.target.value )
+            fileName = e.target.value.split( '\\' ).pop();
+
+          if( fileName )
+            $label.find( 'span' ).html( fileName );
+          else
+            $label.html( labelVal );
+        });
+
+        // Firefox bug fix
+        $input
+        .on( 'focus', function(){ $input.addClass( 'has-focus' ); })
+        .on( 'blur', function(){ $input.removeClass( 'has-focus' ); });
+      });
+    })( jQuery, window, document );
+
   });

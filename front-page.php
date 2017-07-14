@@ -33,7 +33,7 @@ get_header(); ?>
 	<div class="container">
 	  <div class="row">
 			<div class="col-sm-12 section-head">
-				<h2>Get the <span class="primary-color">right answers</span> for any type of pavement issue.</h2>
+				<h2>Get the right answers for any type of pavement issue.</h2>
 				<p>Just send me your questions and photos to learn more about the following common issues:</p>
 			</div>
 		</div>

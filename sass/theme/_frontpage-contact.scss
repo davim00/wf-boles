@@ -1,0 +1,89 @@
+//
+// Front Page Contact Form
+// --------------------------------------------------
+
+#contact {
+
+  .form-group {
+    position: relative;
+  }
+
+  select,
+  textarea,
+  input[type="text"],
+  input[type="password"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="date"],
+  input[type="month"],
+  input[type="time"],
+  input[type="week"],
+  input[type="number"],
+  input[type="email"],
+  input[type="url"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="color"] {
+    background-color: lighten(desaturate($brand-primary, 60%), 25%);
+    color: #fff;
+  }
+
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: lighten(desaturate($brand-primary, 80%), 50%);
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: lighten(desaturate($brand-primary, 80%), 50%);
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    color: lighten(desaturate($brand-primary, 80%), 50%);
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    color: lighten(desaturate($brand-primary, 80%), 50%);
+  }
+
+  input[type="file"] {
+    width: 0.1px;
+  	height: 0.1px;
+  	opacity: 0;
+  	overflow: hidden;
+  	position: absolute;
+  	z-index: -1;
+  }
+
+  span.wpcf7-form-control-wrap + label {
+    @include button-variant(#fff, lighten(desaturate($brand-primary, 60%), 25%), lighten(desaturate($brand-primary, 60%), 25%));
+    max-width: 240px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: none;
+  }
+
+
+
+  .add-file-btn {
+    display: inline-block;
+    position: absolute;
+    bottom: 6px;
+    right: 0;
+
+    a {
+      color: lighten(desaturate($brand-primary, 70%), 40%);
+      font-size: 24px;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: #fff;
+      }
+    }
+  }
+
+
+.del-file {
+  margin-left: 5px;
+  }
+
+  .hide-file {
+    margin-top: 5px;
+  }
+}

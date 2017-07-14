@@ -43,7 +43,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 	## Galleries
 --------------------------------------------------------------*/
 @import "theme/variables";
-@import "bootstrap/mixins";
+@import "theme/mixins";
 
 /*--------------------------------------------------------------
 # Normalize
@@ -60,8 +60,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 @import "bootstrap/grid";
 @import "bootstrap/tables";
 
-@import "bootstrap/forms";
-@import "bootstrap/buttons";
+@import "theme/forms";
+@import "theme/buttons";
 
 /*--------------------------------------------------------------
 # Navigation
@@ -113,3 +113,4 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 @import "theme/front-page";
 @import "theme/frontpage-jumbotron";
 @import "theme/frontpage-thumbnails";
+@import "theme/frontpage-contact";
