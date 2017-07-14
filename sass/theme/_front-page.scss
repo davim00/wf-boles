@@ -74,7 +74,7 @@
   }
 
   #contact {
-    background-color: lighten(desaturate($brand-primary, 60%), 10%);
+    background-color: $brand-primary;
     color: #fff;
 
     h2 {

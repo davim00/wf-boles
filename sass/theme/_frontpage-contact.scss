@@ -24,21 +24,21 @@
   input[type="search"],
   input[type="tel"],
   input[type="color"] {
-    background-color: lighten(desaturate($brand-primary, 60%), 25%);
+    background-color: lighten(desaturate($brand-primary, 10%), 20%);
     color: #fff;
   }
 
   ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-    color: lighten(desaturate($brand-primary, 80%), 50%);
+    color: lighten(desaturate($brand-primary, 50%), 50%);
   }
   ::-moz-placeholder { /* Firefox 19+ */
-    color: lighten(desaturate($brand-primary, 80%), 50%);
+    color: lighten(desaturate($brand-primary, 50%), 50%);
   }
   :-ms-input-placeholder { /* IE 10+ */
-    color: lighten(desaturate($brand-primary, 80%), 50%);
+    color: lighten(desaturate($brand-primary, 50%), 50%);
   }
   :-moz-placeholder { /* Firefox 18- */
-    color: lighten(desaturate($brand-primary, 80%), 50%);
+    color: lighten(desaturate($brand-primary, 50%), 50%);
   }
 
   input[type="file"] {
@@ -51,7 +51,7 @@
   }
 
   span.wpcf7-form-control-wrap + label {
-    @include button-variant(#fff, lighten(desaturate($brand-primary, 60%), 25%), lighten(desaturate($brand-primary, 60%), 25%));
+    @include button-variant(#fff, lighten(desaturate($brand-primary, 10%), 20%), lighten(desaturate($brand-primary, 10%), 20%));
     max-width: 240px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -85,5 +85,23 @@
 
   .hide-file {
     margin-top: 5px;
+  }
+}
+
+#contact-submit {
+  color: #fff;
+  background-color: $brand-info;
+  border-color: $brand-info;
+
+  &:focus,
+  &.focus {
+    color: #fff;
+    background-color: lighten($brand-info, 20%);
+        border-color: lighten($brand-info, 20%);
+  }
+  &:hover {
+    color: #fff;
+    background-color: lighten($brand-info, 20%);
+        border-color: lighten($brand-info, 20%);
   }
 }
