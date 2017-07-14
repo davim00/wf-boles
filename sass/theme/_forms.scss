@@ -619,3 +619,18 @@ input[type="checkbox"] {
     }
   }
 }
+
+// reCAPTCHA
+//
+// Center the Google reCAPTCHA in the form
+.g-recaptcha {
+  text-align: center;
+
+  div {
+    display: inline-block;
+  }
+
+  .wpcf7-form-control-wrap {
+    margin-bottom: -19px;
+  }
+}
