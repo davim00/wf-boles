@@ -29,8 +29,8 @@
   }
 
   @media screen and (min-width: $screen-sm-min) {
-    padding-top:    (($jumbotron-padding * 3) + $navbar-height);
-    padding-bottom: ($jumbotron-padding * 3);
+    padding-top:    ($jumbotron-padding * 3.5);
+    padding-bottom: ($jumbotron-padding * 3.5);
 
     .container &,
     .container-fluid & {
