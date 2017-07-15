@@ -5,6 +5,7 @@ module.exports = function (grunt) {
     concat: {
       dist: {
         src: [
+          'js/jquery-easing.js',
           'js/bootstrap.js',
           'js/functions.js',
           'js/theme.js'
@@ -41,15 +42,73 @@ module.exports = function (grunt) {
         files: {
           'style.css': 'sass/style.scss'
         }
-      }
-    },
+      },
+      build: {
+          options: {
+            sourcemap: 'none',
+            trace: true,
+            style: 'compressed',
+            precision: 8
+          },
+          files: {
+            'build/style.css' : 'sass/style.scss'
+          }
+        }
+      },
     // Autoprefixer
     autoprefixer: {
       dist: {
         files: {
           'style.css': 'style.css'
         }
+      },
+      build: {
+        expand: true,
+        cwd: 'build',
+        src: [ '**/*.css' ],
+        dest: 'build'
       }
+    },
+    // Copy
+    copy: {
+      build: {
+        expand: true,
+        src: [ '**',
+          '!**/node_modules/**',
+          '!**/contact-forms/**',
+          '!**/images/source/**',
+          '!**/sass/**',
+          '!**/*.scss',
+          '!.gitignore',
+          '!.jshintignore',
+          '!.jscsrc',
+          '!_jshintignore',
+          '!_jscsrc',
+          '!**/_*.php',
+          '!.gitignore',
+          '!Gruntfile.js',
+          '!LICENSE',
+          '!package.json',
+          '!README.md',
+          '!.sass-cache/',
+          '!style.css.map',
+          '!**/*.psd',
+          '!**/*.ai'
+        ],
+        dest: 'build'
+      },
+    },
+    // Clean
+    clean: {
+      build: {
+        src: [ 'build' ]
+      },
+      stylesheets: {
+        src: [ 'build/**/*.css', '!build/**/style.css' ]
+      },
+      scripts: {
+        src: [ 'build/**/*.js', '!build/**/scripts.js', '!build/**/skip-link-focus-fix.js' ]
+      },
     },
     // Watch
     watch: {
@@ -71,24 +130,40 @@ module.exports = function (grunt) {
       },
       sass: {
         files: ['sass/*.scss', 'sass/theme/*.scss'],
-        tasks: ['sass'],
+        tasks: ['sass:dist'],
         options: {
           spawn: false
         }
       },
       css: {
         files: ['style.css'],
-        tasks: ['autoprefixer']
+        tasks: ['autoprefixer:dist']
       }
     }
-  })
+  });
 
-  grunt.loadNpmTasks('grunt-contrib-concat')
-  grunt.loadNpmTasks('grunt-contrib-uglify')
-  grunt.loadNpmTasks('grunt-contrib-imagemin')
-  grunt.loadNpmTasks('grunt-contrib-sass')
-  grunt.loadNpmTasks('grunt-autoprefixer')
-  grunt.loadNpmTasks('grunt-contrib-watch')
+  grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-watch');
   // Register tasks
-  grunt.registerTask('default', 'watch')
-}
+  grunt.registerTask('default', 'watch');
+  grunt.registerTask(
+    'stylesheets',
+    'Compiles the stylesheets',
+    [ 'sass:build', 'autoprefixer:build', 'clean:stylesheets' ]
+  );
+  grunt.registerTask(
+    'scripts',
+    'Compiles the JavaScript files',
+    [ 'clean:scripts' ]
+  );
+  grunt.registerTask(
+    'build',
+    'Compiles all of the assets and copies the files to the build directory',
+    [ 'clean:build', 'copy', 'stylesheets', 'scripts' ]);
+};
