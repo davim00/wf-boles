@@ -19,10 +19,10 @@
        </div>
 
        <!-- Collect the nav links, forms, and other content for toggling -->
-       <?php
+       <?php if ( is_front_page() && ! is_home() ) :
          wp_nav_menu( array(
-           'menu'              => 'primary-menu',
-           'theme_location'    => 'primary',
+           'menu'              => 'front-menu',
+           'theme_location'    => 'front-page',
            'depth'             => 2,
            'container'         => 'div',
            'container_class'   => 'collapse navbar-collapse',
@@ -31,6 +31,19 @@
            'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
            'walker'            => new WP_Bootstrap_Navwalker())
              );
+       else :
+         wp_nav_menu( array(
+           'menu'              => 'inner-menu',
+           'theme_location'    => 'inner-page',
+           'depth'             => 2,
+           'container'         => 'div',
+           'container_class'   => 'collapse navbar-collapse',
+           'container_id'      => 'navbar',
+           'menu_class'        => 'nav navbar-nav navbar-right',
+           'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+           'walker'            => new WP_Bootstrap_Navwalker())
+             );
+        endif;
        ?><!-- /.navbar-collapse -->
      </div><!-- /.container-fluid -->
    </nav><!-- #site-navigation -->
