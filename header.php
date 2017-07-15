@@ -19,7 +19,7 @@
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body id="page-top" data-spy="scroll" data-target=".main-navigation" <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wfboles' ); ?></a>
 
@@ -35,8 +35,5 @@
 
 	</header><!-- #masthead -->
 
-	<?php if ( is_front_page() && ! is_home() ) : ?>
-		<div id="content" class="site-content">
-	<?php else : ?>
-		<div id="content" class="site-content container">
-	<?php endif; ?>
+
+	<div id="content" class="site-content">
