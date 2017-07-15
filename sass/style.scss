@@ -107,9 +107,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 --------------------------------------------------------------*/
 @import "theme/elements";
 @import "theme/utility";
+@import "theme/content";
 @import "theme/widgets";
 @import "theme/sections";
 @import "theme/footer";
+@import "theme/page-jumbotron";
 @import "theme/front-page";
 @import "theme/frontpage-jumbotron";
 @import "theme/frontpage-thumbnails";
