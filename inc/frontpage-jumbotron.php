@@ -12,7 +12,7 @@
          <div class="col-sm-12">
            <h1>Got pavement issues?</h1>
            <p>Have your concrete and pavement issues answered by a licensed civil engineer.</p>
-           <a class="btn btn-lg btn-primary" href="#contact">Get your FREE answers now</a>
+           <a class="btn btn-lg btn-primary page-scroll" href="#contact">Get your FREE answers now</a>
          </div>
        </div>
      </div>
