@@ -247,6 +247,10 @@
     transition: color 100ms ease-in-out, background-color 100ms ease-in-out;
   }
 
+  .open .dropdown-menu {
+    border-radius: $border-radius-base;
+  }
+
   @media (max-width: $grid-float-breakpoint-max) {
     // Dropdowns get custom display when collapsed
     .open .dropdown-menu {
@@ -431,11 +435,13 @@
       }
     }
     > .active > a {
-      &,
+      color: $navbar-default-link-active-color;
+      background-color: $navbar-default-link-active-bg;
+
       &:hover,
       &:focus {
-        color: $navbar-default-link-active-color;
-        background-color: $navbar-default-link-active-bg;
+        color: $navbar-default-link-hover-color;
+        background-color: $navbar-default-link-hover-bg;
       }
     }
     > .disabled > a {
@@ -476,11 +482,30 @@
       }
     }
 
+    .open .dropdown-menu {
+      > li > a {
+        transition: color 100ms ease, background-color 100ms ease;
+        &:hover,
+        &:focus {
+          color: #fff;
+          background-color: $navbar-default-link-hover-color;
+        }
+      }
+      > .active > a {
+        color: #fff;
+        background-color: $gray-light;
+        &:hover,
+        &:focus {
+          color: #fff;
+          background-color: $navbar-default-link-hover-color;
+        }
+      }
+    }
+
     @media (max-width: $grid-float-breakpoint-max) {
       // Dropdowns get custom display when collapsed
       .open .dropdown-menu {
         > li > a {
-          color: $navbar-default-link-color;
           &:hover,
           &:focus {
             color: $navbar-default-link-hover-color;
