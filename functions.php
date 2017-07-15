@@ -58,9 +58,10 @@ function wfboles_setup() {
 	// Register Custom Navigation Walker
 	require_once('inc/wp-bootstrap-navwalker.php');
 
-	// This theme uses wp_nav_menu() in one location.
+	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Main navigation area', 'wfboles' ),
+		'front-page' => esc_html__( 'Front page navigation area', 'wfboles' ),
+		'inner-page' => esc_html__( 'Page and post navigation area', 'wfboles' ),
 	) );
 
 
