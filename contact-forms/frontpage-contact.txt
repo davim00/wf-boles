@@ -14,15 +14,15 @@
     <label for="text-message" class="sr-only">Message</label>[textarea* text-message id:contact-message class:form-control x10 placeholder "Message"]
   </div>
   <div class="form-group">
-  <p>You may attach up to 8 pictures. Each picture cannot exceed 1 megabyte in size.</p>
-  <div class="hide-file">[file file-01 limit:1mb filetypes:gif|png|jpg|jpeg|tiff id:contact-file01]</div>
-  <div class="hide-file">[file file-02 limit:1mb filetypes:gif|png|jpg|jpeg|tiff id:contact-file02]<a class="del-file" href="#">Delete File</a></div>
-  <div class="hide-file">[file file-03 limit:1mb filetypes:gif|png|jpg|jpeg|tiff id:contact-file03]<a class="del-file" href="#">Delete File</a></div>
-  <div class="hide-file">[file file-04 limit:1mb filetypes:gif|png|jpg|jpeg|tiff id:contact-file04]<a class="del-file" href="#">Delete File</a></div>
-  <div class="hide-file">[file file-05 limit:1mb filetypes:gif|png|jpg|jpeg|tiff id:contact-file05]<a class="del-file" href="#">Delete File</a></div>
-  <div class="hide-file">[file file-06 limit:1mb filetypes:gif|png|jpg|jpeg|tiff id:contact-file06]<a class="del-file" href="#">Delete File</a></div>
-  <div class="hide-file">[file file-07 limit:1mb filetypes:gif|png|jpg|jpeg|tiff id:contact-file07]<a class="del-file" href="#">Delete File</a></div>
-  <div class="hide-file">[file file-08 limit:1mb filetypes:gif|png|jpg|jpeg|tiff id:contact-file08]<a class="del-file" href="#">Delete File</a></div>
-  <a class="add-file" href="#">Add File</a>
+  <p>Use the button below to attach your pictures. Please select one file at a time, using the plus (+) symbol to the right to add more files. You may attach up to 8 pictures. Each picture cannot exceed 1 megabyte in size.</p>
+  <div class="hide-file">[file file-01 limit:1mb filetypes:gif|png|jpg|jpeg|tiff id:contact-file01]<label for="contact-file01" class="btn btn-default"><span>Choose a file</span></label></div>
+  <div class="hide-file">[file file-02 limit:1mb filetypes:gif|png|jpg|jpeg|tiff id:contact-file02]<label for="contact-file02" class="btn btn-default"><span>Choose a file</span></label><a class="del-file btn btn-info" href="#"> <i class="fa fa-trash"></i> Delete File</a></div>
+  <div class="hide-file">[file file-03 limit:1mb filetypes:gif|png|jpg|jpeg|tiff id:contact-file03]<label for="contact-file03" class="btn btn-default"><span>Choose a file</span></label><a class="del-file btn btn-info" href="#"> <i class="fa fa-trash"></i> Delete File</a></div>
+  <div class="hide-file">[file file-04 limit:1mb filetypes:gif|png|jpg|jpeg|tiff id:contact-file04]<label for="contact-file04" class="btn btn-default"><span>Choose a file</span></label><a class="del-file btn btn-info" href="#"> <i class="fa fa-trash"></i> Delete File</a></div>
+  <div class="hide-file">[file file-05 limit:1mb filetypes:gif|png|jpg|jpeg|tiff id:contact-file05]<label for="contact-file05" class="btn btn-default"><span>Choose a file</span></label><a class="del-file btn btn-info" href="#"> <i class="fa fa-trash"></i> Delete File</a></div>
+  <div class="hide-file">[file file-06 limit:1mb filetypes:gif|png|jpg|jpeg|tiff id:contact-file06]<label for="contact-file06" class="btn btn-default"><span>Choose a file</span></label><a class="del-file btn btn-info" href="#"> <i class="fa fa-trash"></i> Delete File</a></div>
+  <div class="hide-file">[file file-07 limit:1mb filetypes:gif|png|jpg|jpeg|tiff id:contact-file07]<label for="contact-file07" class="btn btn-default"><span>Choose a file</span></label><a class="del-file btn btn-info" href="#"> <i class="fa fa-trash"></i> Delete File</a></div>
+  <div class="hide-file">[file file-08 limit:1mb filetypes:gif|png|jpg|jpeg|tiff id:contact-file08]<label for="contact-file08" class="btn btn-default"><span>Choose a file</span></label><a class="del-file btn btn-info" href="#"> <i class="fa fa-trash"></i> Delete File</a></div>
+<div class="add-file-btn"><a class="add-file" href="#" data-toggle="tooltip" title="Add file"><i class="fa fa-plus"></i></a></div>
   </div>
-  [submit id:contact-submit class:btn class:btn-default "Submit"]
+  [submit id:contact-submit class:btn class:btn-default class:btn-block "Send your question"]
