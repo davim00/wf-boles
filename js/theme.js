@@ -28,6 +28,18 @@
       e.preventDefault();
     });
 
+    //jQuery for page scrolling feature - requires jQuery Easing plugin
+    $('.menu-item > a').addClass('page-scroll')
+    $(function() {
+        $(document).on('click', 'a.page-scroll', function(event) {
+            var $anchor = $(this);
+            $('html, body').stop().animate({
+                scrollTop: $($anchor.attr('href')).offset().top
+            }, 1500, 'easeInOutExpo');
+            event.preventDefault();
+        });
+    });
+
     /*
       By Osvaldas Valutis, www.osvaldas.info
       Available for use under the MIT License
