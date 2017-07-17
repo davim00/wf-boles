@@ -7,3 +7,18 @@
 .content-area {
   margin-bottom: $grid-gutter-width;
 }
+
+// Page headers
+#masthead {
+  position: relative;
+
+  .navbar {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+
+    @media (min-width: $grid-float-breakpoint) {
+      border-radius: 0;
+    }
+  }
+}

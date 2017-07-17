@@ -77,14 +77,18 @@ function custom_password_form() {
   */
  function wfboles_the_custom_logo() {
 	 if ( function_exists( 'the_custom_logo' ) ) {
- 		the_custom_logo();
+		 if ( has_custom_logo() ) {
+			 the_custom_logo();
+		 } else { ?>
+			 <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+		 <?php }
  	}
  }
 // Make the custom logo play nicely with Bootstrap
  add_filter('get_custom_logo','change_logo_class');
  function change_logo_class($html) {
-	 $html = str_replace('custom-logo-link', 'navbar-brand', $html);
-	 return $html;
+	$html = str_replace('custom-logo-link', 'navbar-brand', $html);
+	return $html;
  }
  add_filter( 'get_custom_logo', 'remove_width_attribute', 10 );
 function remove_width_attribute( $html ) {

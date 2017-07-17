@@ -28,6 +28,10 @@
     color: #fff;
   }
 
+  .btn-lg {
+    text-transform: none;
+  }
+
   @media screen and (min-width: $screen-sm-min) {
     padding-top:    ($jumbotron-padding * 3.5);
     padding-bottom: ($jumbotron-padding * 3.5);

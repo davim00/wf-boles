@@ -182,6 +182,7 @@
 
   > img {
     display: block;
+    margin-top: -8px;
   }
 
   @media (min-width: $grid-float-breakpoint) {
@@ -252,6 +253,7 @@
   }
 
   @media (max-width: $grid-float-breakpoint-max) {
+    margin: 0 $navbar-padding-horizontal;
     // Dropdowns get custom display when collapsed
     .open .dropdown-menu {
       position: static;

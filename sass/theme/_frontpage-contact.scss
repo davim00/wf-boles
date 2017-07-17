@@ -56,6 +56,10 @@
     overflow: hidden;
     text-overflow: ellipsis;
     text-transform: none;
+
+    @media (max-width: $grid-float-breakpoint-max) {
+      max-width: 144px;
+    }
   }
 
 

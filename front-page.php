@@ -18,7 +18,7 @@ get_header(); ?>
 	<div class="container">
 	  <div class="row">
 	    <div class="col-sm-6">
-				<div class="text-top-100">
+				<div class="intro-text-block">
 					<h2>Hello, I&rsquo;m <span class="primary-color">William Boles</span></h2>
 					<p class="intro-text">I&rsquo;ve worked in the pavement industry for over 35 years as a civil engineer, contractor and consultant for the federal government and several private companies. Now, I want to help you overcome your pavement problems and answer the concerns you might have with your concrete and asphalt work.</p>
 				</div>

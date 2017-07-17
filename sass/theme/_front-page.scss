@@ -3,20 +3,6 @@
 // --------------------------------------------------
 
 
-#masthead {
-  position: relative;
-
-  .navbar {
-    position: absolute;
-    z-index: 10;
-    width: 100%;
-
-    @media (min-width: $grid-float-breakpoint) {
-      border-radius: 0;
-    }
-  }
-}
-
 .home {
 
   section h2 {
@@ -28,6 +14,16 @@
 
       h2 {
         font-size: ceil($font-size-h2 * 1.1);
+      }
+    }
+  }
+
+  #intro {
+    .intro-text-block {
+      margin-top: 100px;
+
+      @media (max-width: $grid-float-breakpoint-max) {
+        margin-top: 0;
       }
     }
 
@@ -45,30 +41,11 @@
       color: #fff;
     }
 
-    ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
+    .col-sm-4 {
+      margin-bottom: $grid-gutter-width;
 
-      > li {
-        margin-bottom: ($padding-base-vertical * 2);
-        padding: $padding-base-vertical;
-        background: #fff;
-        color: $text-color;
-        box-shadow: 0 8px 36px rgba(0, 0, 0, 0.5);
-
-        &:last-of-type {
-          margin-bottom: 0;
-        }
-
-        img {
-          width: 200px;
-          height: auto;
-          margin-left: -($padding-base-vertical);
-          margin-top: -($padding-base-vertical);
-          margin-bottom: -($padding-base-vertical);
-          margin-right: ($grid-gutter-width / 2);
-        }
+      @media (min-width: $grid-float-breakpoint) {
+        margin-bottom: 0;
       }
     }
   }

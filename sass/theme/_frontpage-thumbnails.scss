@@ -9,9 +9,9 @@
   &.thumbnail {
     display: block;
     padding: 0;
-    margin-bottom: 0;
     line-height: $line-height-base;
     background-color: #fff;
+    margin-bottom: 0;
     border: none;
     border-radius: $border-radius-base;
     box-shadow: 0 8px 36px rgba(0,0,0,0.5);
@@ -44,4 +44,8 @@
     border-color: $link-color;
   }
 
+}
+
+@media (min-width: $grid-float-breakpoint) {
+  margin-bottom: 0;
 }
