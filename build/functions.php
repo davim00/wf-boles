@@ -40,13 +40,13 @@ function wfboles_setup() {
 	 *
 	 * @link https://codex.wordpress.org/Theme_Logo
 	 */
-	add_theme_support( 'custom-logo', array(
-		'height'      => 20,
-		'width'       => 32,
-		'flex-height' => false,
-		'flex-width'  => true,
-		'header-text' => 'site-title'
-	) );
+	 add_theme_support( 'custom-logo', array(
+		 'height'      => 40,
+		 'width'       => 200,
+		 'flex-height' => false,
+		 'flex-width'  => true,
+		 'header-text' => 'site-title'
+	 ) );
 
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.
