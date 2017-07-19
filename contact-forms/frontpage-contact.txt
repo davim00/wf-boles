@@ -25,4 +25,7 @@
   <div class="hide-file">[file file-08 limit:1mb filetypes:gif|png|jpg|jpeg|tiff id:contact-file08]<label for="contact-file08" class="btn btn-default"><span>Choose a file</span></label><a class="del-file btn btn-info" href="#"> <i class="fa fa-trash"></i> Delete File</a></div>
 <div class="add-file-btn"><a class="add-file" href="#" data-toggle="tooltip" title="Add file"><i class="fa fa-plus"></i></a></div>
   </div>
+<div class="g-recaptcha form-group">
+[recaptcha]
+</div>
   [submit id:contact-submit class:btn class:btn-default class:btn-block "Send your question"]

@@ -67,7 +67,7 @@ wfboles_Kirki::add_config( 'wfboles_theme', array(
  */
 wfboles_Kirki::add_section( 'typography', array(
 	'title'      => esc_attr__( 'Typography', 'wfboles' ),
-	'priority'   => 2,
+	'priority'   => 50,
 	'capability' => 'edit_theme_options',
 ) );
 
@@ -183,7 +183,7 @@ wfboles_Kirki::add_field( 'wfboles_theme', array(
  */
 wfboles_Kirki::add_section( 'footer_options', array(
 	'title'      => esc_attr__( 'Footer Options', 'wfboles' ),
-	'priority'   => 3,
+	'priority'   => 130,
 	'capability' => 'edit_theme_options',
 ) );
 

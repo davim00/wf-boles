@@ -645,6 +645,19 @@
       color: #fff;
       background-color: $brand-primary;
     }
+
+    > i {
+      margin-right: 10px;
+    }
+
+    @media (max-width: $grid-float-breakpoint-max) {
+      > i {
+        margin-right: 0;
+      }
+      > span {
+        display: none;
+      }
+    }
   }
 }
 

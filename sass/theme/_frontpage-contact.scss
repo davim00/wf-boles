@@ -83,9 +83,15 @@
   }
 
 
-.del-file {
-  margin-left: 5px;
-  }
+  .del-file {
+    margin-left: 5px;
+
+    > span {
+      @media (max-width: $grid-float-breakpoint-max) {
+        display: none;
+      }
+    }
+    }
 
   .hide-file {
     margin-top: 5px;
