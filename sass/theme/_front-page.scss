@@ -22,6 +22,10 @@
     .intro-text-block {
       margin-top: 100px;
 
+      h2 b {
+        color: $brand-primary;
+      }
+
       @media (max-width: $grid-float-breakpoint-max) {
         margin-top: 0;
       }

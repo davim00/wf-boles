@@ -126,7 +126,7 @@ function wfboles_widgets_init() {
 		'name'          => esc_html__( 'Blog Sidebar', 'wfboles' ),
 		'id'            => 'sidebar-1',
 		'description'   => esc_html__( 'Add widgets here.', 'wfboles' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s col-sm-12"><div class="panel panel-default">',
+		'before_widget' => '<section id="%1$s" class="widget %2$s col-sm-12 col-md-8 col-md-push-2"><div class="panel panel-default">',
 		'after_widget'  => '</div></section>',
 		'before_title'  => '<div class="widget-title panel-heading"><h3>',
 		'after_title'   => '</h3></div>',
@@ -254,6 +254,7 @@ add_action( 'tgmpa_register', 'wfboles_register_required_plugins' );
  * Load template files.
  */
 require get_template_directory() . '/inc/site-navigation.php';
+require get_template_directory() . '/inc/page-header.php';
 require get_template_directory() . '/inc/frontpage-jumbotron.php';
 require get_template_directory() . '/inc/frontpage-form.php';
 require get_template_directory() . '/inc/footer-text.php';

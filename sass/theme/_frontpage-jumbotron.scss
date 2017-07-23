@@ -23,7 +23,7 @@
   }
 
   p {
-    margin-bottom: $jumbotron-padding;
+    margin-bottom: 0;
     font-size: ($jumbotron-font-size * 0.7);
     font-weight: 400;
     color: #fff;
@@ -31,6 +31,7 @@
 
   .btn-lg {
     text-transform: none;
+    margin-top: $jumbotron-padding;
 
     @media (max-width: $grid-float-breakpoint-max) {
       font-size: 16px;

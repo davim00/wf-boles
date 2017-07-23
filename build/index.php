@@ -38,16 +38,23 @@ get_header(); ?>
 				 */
 				get_template_part( 'template-parts/content', get_post_format() );
 
-			endwhile;
+			endwhile; ?>
 
-			the_posts_pagination(array(
-				'prev_text' => __('Previous', 'wfboles'),
-				'next_text' => __('Next', 'wfboles')
-			));
+			<div class="entry-content row">
+			  <div class="col-sm-12 col-md-8 col-md-push-2">
 
-			the_posts_navigation();
+					<?php
+					the_posts_pagination(array(
+						'prev_text' => __('Previous', 'wfboles'),
+						'next_text' => __('Next', 'wfboles')
+					));
 
-		else :
+					the_posts_navigation(); ?>
+
+				</div><!-- .row -->
+			</div><!-- .col -->
+
+		<?php else :
 
 			get_template_part( 'template-parts/content', 'none' );
 

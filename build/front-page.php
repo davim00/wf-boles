@@ -19,97 +19,62 @@ get_header(); ?>
 	  <div class="row">
 	    <div class="col-sm-6">
 				<div class="intro-text-block">
-					<h2>Hello, I&rsquo;m <span class="primary-color">William Boles</span></h2>
-					<p class="intro-text">I&rsquo;ve worked in the pavement industry for over 35 years as a civil engineer, contractor and consultant for the federal government and several private companies. Now, I want to help you overcome your pavement problems and answer the concerns you might have with your concrete and asphalt work.</p>
+					<h2><?php echo get_theme_mod( 'about_header_text', 'Fusce tincidunt <b>tempor lobortis</b>.' ); ?></h2>
+					<p class="intro-text"><?php echo get_theme_mod( 'about_text', 'Nunc condimentum sed mi ac efficitur. Vestibulum quis tempus felis, ac tincidunt tellus. Proin fermentum neque sed tempor accumsan. Cras elementum sem non justo cursus, vitae mattis dolor viverra. Pellentesque gravida gravida nulla sed tempor. Quisque efficitur congue elit id pellentesque. Praesent eros nisi, elementum quis tortor at, dignissim lobortis urna. Donec metus neque, tristique a orci ac, convallis sodales mauris. Mauris placerat dolor non dapibus rutrum.' ); ?></p>
 				</div>
 	    </div>
 			<div class="col-sm-6">
-			  <img class="img-responsive" src="<?php echo get_template_directory_uri() . '/images/headshot.jpg' ?>" alt="Head Shot" />
+			  <img class="img-responsive" src="<?php echo esc_url( get_theme_mod( 'about_image', get_template_directory_uri() . '/images/headshot.jpg' ) ); ?>" alt="Head Shot" />
 			</div>
 	  </div>
 	</div>
 </section>
-<section id="answers" class="top-space bottom-space" style="background-image: url(<?php echo get_template_directory_uri() . '/images/cracked-drive.jpg' ?>)">
+<?php if ( 'image' == get_theme_mod( 'issues_bg_toggle', 'color' ) ) : ?>
+<section id="answers" class="top-space bottom-space" style="background: url('<?php echo esc_url( get_theme_mod( 'issues_bg_image', get_template_directory_uri() . '/images/cracked-drive.jpg' ) ); ?>')">
+<?php else : ?>
+<section id="answers" class="top-space bottom-space" style="background: <?php echo get_theme_mod( 'issues_bg_color', '#2B3B4C' ); ?>">
+<?php endif; ?>
 	<div class="container">
 	  <div class="row">
 			<div class="col-sm-12 section-head">
-				<h2>Get the right answers for any type of pavement issue.</h2>
-				<p>Just send me your questions and photos to learn more about the following common issues:</p>
+				<h2><?php echo get_theme_mod( 'issues_header_text', 'Nulla nec nisl at ex ullamcorper sollicitudin sed.' ); ?></h2>
+				<p><?php echo get_theme_mod( 'issues_text', 'Integer ante tortor, pharetra vitae facilisis id, laoreet ut magna nulla facilisi quisque blandit.' ); ?></p>
 			</div>
 		</div>
-		<div class="row">
-		  <div class="col-sm-4">
-		    <div class="thumbnail frontpage-thumbnail">
-		      <img src="<?php echo get_template_directory_uri() . '/images/thumb-01.jpg' ?>" alt="Cracks" />
-					<div class="caption">
-						<p>Cracks, scaling and surface wear</p>
-					</div>
-			  </div>
-			</div>
-			<div class="col-sm-4">
-				<div class="thumbnail frontpage-thumbnail">
-					<img src="<?php echo get_template_directory_uri() . '/images/thumb-02.jpg' ?>" alt="Weather" />
-					<div class="caption">
-						<p>Weather and drainage issues</p>
-					</div>
+		<div class="row row-centered">
+
+			<?php // Default values for 'my_setting' theme mod.
+			$defaults = array(
+				array(
+					'issue_image'		=> get_template_directory_uri() . '/images/thumb.jpg',
+					'issue_desc'		=> esc_attr__( 'Issue description', 'wfboles' ),
+				),
+				array(
+					'issue_image'		=> get_template_directory_uri() . '/images/thumb.jpg',
+					'issue_desc'		=> esc_attr__( 'Issue description', 'wfboles' ),
+				),
+				array(
+					'issue_image'		=> get_template_directory_uri() . '/images/thumb.jpg',
+					'issue_desc'		=> esc_attr__( 'Issue description', 'wfboles' ),
+				),
+			);
+
+			// Theme_mod settings to check.
+			$settings = get_theme_mod( 'issues_repeater', $defaults );
+			foreach( $settings as $setting ) : ?>
+				<div class="col-sm-4 col-centered">
+			    <div class="thumbnail frontpage-thumbnail">
+			      <img src="<?php echo $setting['issue_image']; ?>" alt="Cracks" />
+						<div class="caption">
+							<p><?php echo $setting['issue_desc']; ?></p>
+						</div>
+				  </div>
 				</div>
-			</div>
-			<div class="col-sm-4">
-				<div class="thumbnail frontpage-thumbnail">
-					<img src="<?php echo get_template_directory_uri() . '/images/thumb-03.jpg' ?>" alt="Design" />
-					<div class="caption">
-						<p>Parking lot, driveway or road design</p>
-					</div>
-			</div>
+			<?php endforeach; ?>
+
 		</div>
-	</div>
 </section>
 
-<?php wfboles_frontpage_form(); ?>
+<?php wfboles_frontpage_form();
 
-	<!--<div id="primary" class="content-area row">
-		<main id="main" class="site-main col-sm-12" role="main">-->
-
-		<?php /*
-		if ( have_posts() ) :
-
-			if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-
-			<?php
-		endif;*/
-
-			/* Start the Loop */
-			/*
-			while ( have_posts() ) : the_post();*/
-
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				 /*
-				get_template_part( 'template-parts/content', get_post_format() );
-
-			endwhile;
-
-			the_posts_pagination(array(
-				'prev_text' => __('Previous', 'wfboles'),
-				'next_text' => __('Next', 'wfboles')
-			));
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif; ?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php*/
 get_footer();

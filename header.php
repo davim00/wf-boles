@@ -29,11 +29,16 @@
 
 
 		<?php // A jumbotron (hero image) can be displayed on a static front page, set with the customizer
-		if ( is_front_page() && ! is_home() ) :
+		if ( is_front_page() && ! is_home() && true == get_theme_mod( 'header_switch', false ) ) :
 			wfboles_frontpage_jumbotron();
+		else :
+			wfboles_page_header();
 		endif; ?>
 
 	</header><!-- #masthead -->
 
-
-	<div id="content" class="site-content">
+	<?php if ( is_front_page() && ! is_home() ) : ?>
+		<div id="content" class="site-content">
+	<?php else : ?>
+		<div id="content" class="site-content container">
+	<?php endif;

@@ -11,8 +11,8 @@
      <div class="container">
        <div class="row row-centered">
          <div class="col-lg-7 col-md-8 col-sm-10 col-centered section-head">
-           <h2>Send your questions today</h2>
-           <p>I&rsquo;m ready to give you FREE insights into pavement related issues you are dealing with. Just use the form below to send your questions, and be sure to include multiple closeup and overview photos to get the best response. Your information will remain private and will not be shared.</p>
+           <h2><?php echo get_theme_mod( 'form_header_text', 'Contact us today.'); ?></h2>
+           <p><?php echo get_theme_mod( 'form_text', 'In eu mi rhoncus, euismod augue nec, vulputate nunc. Fusce hendrerit magna et felis fringilla, quis venenatis ex cursus. Nunc mattis molestie mi, id pulvinar libero fermentum sit amet. Duis id justo est. Ut cursus vehicula sodales. Integer pretium lectus in purus pulvinar, sit amet tempor eros accumsan.'); ?></p>
          </div>
        </div>
        <div class="row row-centered">
