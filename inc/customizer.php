@@ -382,7 +382,7 @@ wfboles_Kirki::add_field( 'wfboles_theme', array(
 	'description' 			=> esc_attr__( 'The background image for the &ldquo;Issues&rdquo; section', 'wfboles' ),
 	'help'        			=> esc_attr__( 'Select the image for the background. Landscape images work best. Use an image editor to adjust the contrast, brightness and color to improve the legibility of text.', 'wfboles' ),
 	'section'     			=> 'frontpage_issues',
-	'default'     			=> '#2B3B4C',
+	'default'     			=> get_template_directory_url() . '/images/issues-bg.jpg',
 	'priority'    			=> 50,
 	'active_callback'   => array(
 		array(
