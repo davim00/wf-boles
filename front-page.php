@@ -64,7 +64,7 @@ get_header(); ?>
 			foreach( $settings as $setting ) : ?>
 				<div class="col-sm-4 col-centered">
 			    <div class="thumbnail frontpage-thumbnail">
-			      <img src="<?php echo $setting['issue_image']; ?>" alt="Cracks" />
+			      <img src="<?php echo wp_get_attachment_url( $setting['issue_image'] ); ?>" alt="Cracks" />
 						<div class="caption">
 							<p><?php echo $setting['issue_desc']; ?></p>
 						</div>
