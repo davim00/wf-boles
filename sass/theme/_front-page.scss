@@ -49,9 +49,6 @@
     .col-sm-4 {
       margin-bottom: $grid-gutter-width;
 
-      @media (min-width: $grid-float-breakpoint) {
-        margin-bottom: 0;
-      }
     }
   }
 

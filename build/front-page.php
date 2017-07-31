@@ -30,9 +30,9 @@ get_header(); ?>
 	</div>
 </section>
 <?php if ( 'image' == get_theme_mod( 'issues_bg_toggle', 'color' ) ) : ?>
-<section id="answers" class="top-space bottom-space" style="background: url('<?php echo esc_url( get_theme_mod( 'issues_bg_image', get_template_directory_uri() . '/images/cracked-drive.jpg' ) ); ?>')">
+<section id="answers" class="top-space" style="background-image: url('<?php echo esc_url( get_theme_mod( 'issues_bg_image', get_template_directory_uri() . '/images/cracked-drive.jpg' ) ); ?>')">
 <?php else : ?>
-<section id="answers" class="top-space bottom-space" style="background: <?php echo get_theme_mod( 'issues_bg_color', '#2B3B4C' ); ?>">
+<section id="answers" class="top-space" style="background-color: <?php echo get_theme_mod( 'issues_bg_color', '#2B3B4C' ); ?>">
 <?php endif; ?>
 	<div class="container">
 	  <div class="row">
