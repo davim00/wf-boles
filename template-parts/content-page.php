@@ -24,29 +24,29 @@
 	</div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="container entry-footer">
-			<div class="row">
-			  <div class="col-sm-12 col-md-8 col-md-push-2">
-					<?php
-						edit_post_link(
-							sprintf(
-								wp_kses(
-									/* translators: %s: Name of current post. Only visible to screen readers */
-									__( 'Edit <span class="screen-reader-text">%s</span>', 'wfboles' ),
-									array(
-										'span' => array(
-											'class' => array(),
-										),
-									)
-								),
-								get_the_title()
+		<footer class="entry-footer row">
+		  <div class="col-sm-12 col-md-8 col-md-push-2">
+				<?php
+					edit_post_link(
+						sprintf(
+							wp_kses(
+								/* translators: %s: Name of current post. Only visible to screen readers */
+								__( 'Edit <span class="screen-reader-text">%s</span>', 'wfboles' ),
+								array(
+									'span' => array(
+										'class' => array(),
+									),
+								)
 							),
-							'<span class="edit-link">',
-							'</span>'
-						);
-					?>
-			  </div><!-- .col -->
-			</div><!-- .row -->
+							get_the_title()
+						),
+						'<span class="edit-link">',
+						'</span>',
+						'',
+						'post-edit-link btn btn-default btn-xs'
+					);
+				?>
+		  </div><!-- .col -->
 		</footer><!-- .entry-footer -->
 	<?php endif; ?>
 </article><!-- #post-<?php the_ID(); ?> -->

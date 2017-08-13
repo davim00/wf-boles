@@ -10,13 +10,10 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="entry-content row">
+	<header class="entry-header row">
 	  <div class="col-sm-12 col-md-8 col-md-push-2">
-			<header class="entry-header">
 				<?php
-				if ( is_singular() ) :
-					the_title( '<h2 class="entry-title">', '</h2>' );
-				else :
+				if ( ! is_singular() ) :
 					the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 				endif;
 
@@ -26,9 +23,11 @@
 				</div><!-- .entry-meta -->
 				<?php
 				endif; ?>
-			</header><!-- .entry-header -->
+			</div>
+		</header><!-- .entry-header -->
 
-			<div class="entry-content">
+		<div class="entry-content row">
+			<div class="col-sm-12 col-md-8 col-md-push-2">
 				<?php
 					the_content( sprintf(
 						wp_kses(
@@ -48,11 +47,12 @@
 						'after'  => '</div>',
 					) );
 				?>
-			</div><!-- .entry-content -->
+			</div>
+		</div><!-- .entry-content -->
 
-			<footer class="entry-footer">
+		<footer class="entry-footer row">
+			<div class="col-sm-12 col-md-8 col-md-push-2">
 				<?php wfboles_entry_footer(); ?>
-			</footer><!-- .entry-footer -->
-		</div><!-- .col -->
-	</div><!-- .entry-content -->
+			</div>
+		</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
