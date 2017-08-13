@@ -8,7 +8,7 @@
  function wfboles_page_header() { ?>
    <div class="jumbotron entry-header">
 
-      <?php if ( is_front_page() && ! is_archive() && ! is_404() && ! is_search() ) : ?>
+      <?php if ( is_front_page() || is_single() || is_page() && ! is_archive() && ! is_404() && ! is_search() ) : ?>
         <h1 class="entry-title">
           <?php single_post_title(); ?>
         </h1>
