@@ -96,7 +96,9 @@ function wfboles_entry_footer() {
 			get_the_title()
 		),
 		'<span class="edit-link">',
-		'</span>'
+		'</span>',
+		'',
+		'post-edit-link btn btn-default btn-xs'
 	);
 }
 endif;
